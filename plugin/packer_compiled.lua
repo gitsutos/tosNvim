@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/sulaim/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/sulaim/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/sulaim/.local/share/nvim/site/pack/packer/start/friendly-snippets",
