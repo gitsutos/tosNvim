@@ -1,5 +1,9 @@
 -- ToggleTerm
-require("toggleterm").setup({})
+require("toggleterm").setup({
+    size = 20,
+    open_mapping = [[<C-/>]],
+    shell = vim.o.shell
+})
 
 -- JUPYTER
 require("jupyter-nvim").setup {

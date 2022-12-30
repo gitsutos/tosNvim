@@ -215,11 +215,6 @@ _G.packer_plugins = {
     path = "/home/sulaim/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/sulaim/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
-  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/sulaim/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
