@@ -13,19 +13,35 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
-
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
 
+    use("folke/zen-mode.nvim")
+    use("terrortylor/nvim-comment")
+
+    -- Lua
+    use {
+        "ahmedkhalf/jupyter-nvim",
+        run = ":UpdateRemotePlugins",
+    }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+    use { "akinsho/toggleterm.nvim" }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+    -- flutter
+    use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+
+    -- Lsp
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
@@ -48,28 +64,12 @@ return require('packer').startup(function(use)
         }
     }
 
-    use("folke/zen-mode.nvim")
-    use("github/copilot.vim")
-    use("terrortylor/nvim-comment")
-
-    -- Lua
-    use {
-        "ahmedkhalf/jupyter-nvim",
-        run = ":UpdateRemotePlugins",
-    }
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
-    }
-    use { "akinsho/toggleterm.nvim" }
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
-    -- flutter
-    use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+    use({
+        'rose-pine/neovim',
+        as = 'rose-pine',
+        config = function()
+            vim.cmd('colorscheme rose-pine')
+        end
+    })
 
 end)
